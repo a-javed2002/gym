@@ -1,0 +1,16 @@
+.btn-custom-hover {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7571f9;
+    color: #7571f9;
+}
+
+.btn-custom-hover:hover {
+    background-color: #7571f9;
+    color: white;
+    border: 1px solid #7571f9; /* Ensures border color remains consistent */
+}

@@ -1,0 +1,370 @@
+.card {
+    border: none;
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .carousel-item img {
+    height: 200px;
+  }
+  
+  .modal img {
+    width: 100%;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+ /* Exercise.css */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.filter-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-title .react-icons {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.filter-form .form-label {
+  font-weight: bold;
+}
+
+.filter-select {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+
+.filter-input {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.input-group {
+  border-radius: 4px;
+}
+
+.input-group .form-control {
+  border-radius: 4px;
+}.filter-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #7571f9; /* Title color */
+  }
+  
+  .filter-title .react-icons {
+    margin-right: 10px;
+    color: #007bff; /* Icon color in title */
+  }
+  
+  .filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filter-label {
+    font-weight: bold;
+    color: #7571f9; /* Label color */
+  }
+  
+  .filter-select,
+  .filter-input {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  }
+  
+  .input-group {
+    border-radius: 4px;
+  }
+  
+  /* Optional: Adjust input group icons color if needed */
+  .input-group .input-group-text {
+    color: #7571f9; /* Icon color in input groups, if applicable */
+  }/* Custom styling for buttons */
+.custom-btn {
+    background-color: #7571f9; /* Button background color */
+    color: white; /* Text and icon color */
+    border: none; /* Remove border */
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px; /* Optional padding */
+    border-radius: 4px; /* Optional border-radius */
+  }
+  
+  .custom-btn:hover {
+    background-color: #5e5bde; /* Slightly darker shade on hover */
+  }
+  
+  .custom-btn .react-icons {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .exercise-card {
+    width: 18rem;
+    margin-bottom: 1rem;
+    background-color: #fff; /* Ensure the card has a background color */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Main shadow */
+                0 2px 4px rgba(0, 0, 0, 0.05); /* Smaller shadow for added depth */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow changes */
+  }
+  
+  .exercise-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), /* Enhanced shadow on hover */
+                0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow for added depth */
+  }
+  
+  .custom-btn {
+    background-color: #7571f9;
+    color: white;
+    width: 100%;
+    border: none;
+  }
+  
+  .custom-btn:hover {
+    background-color: #5a4fdd;
+  }
+  
+  .exercise-modal .modal-content {
+    border-radius: 8px;
+  }
+  
+  .exercise-modal .modal-header {
+    background-color: #7571f9;
+    color: white;
+  }
+  
+  .exercise-modal .modal-footer {
+    border-top: none;
+  }
+  .exercise-card {
+    width: 18rem;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-btn {
+    background-color: #7571f9;
+    color: white;
+    width: 100%;
+    border: none;
+  }
+  
+  .custom-btn:hover {
+    background-color: #5a4fdd;
+  }
+  
+  .exercise-modal .modal-content {
+    border-radius: 8px;
+  }
+  
+  .exercise-modal .modal-header {
+    background-color: #7571f9;
+    color: white;
+  }
+  
+  .exercise-modal .modal-footer {
+    border-top: none;
+  }
+  
+  .custom-btn-add {
+    background-color: #28a745; /* Change color as needed */
+    color: white;
+    border: none;
+  }
+  
+  .custom-btn-add:hover {
+    background-color: #218838; /* Change hover color as needed */
+  }
+  .content-body {
+    position: relative; /* Ensure the FAB can be positioned absolutely within this container */
+}
+.fab-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
+    border-radius: 10px; /* Remove rounding to make it a square */
+    background-color: #007bff; /* Blue color or any color of your choice */
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other content */
+    transition: background-color 0.3s ease;
+}
+
+.fab-btn:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+@media (max-width: 576px) {
+    .fab-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 50px; /* Adjust width for smaller screens */
+        height: 50px; /* Adjust height for smaller screens */
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+}
+.exercise-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-image-container {
+    position: relative;
+  }
+  
+  .card-image-container .slick-slide img {
+    transition: filter 0.3s ease;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+  
+  .card-info {
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-overlay p,
+  .card-overlay .custom-btn {
+    margin-bottom: 10px;
+  }
+  
+  .card-overlay .custom-btn {
+    margin-top: 10px;
+  }
+  
+  .exercise-card:hover .card-overlay {
+    opacity: 1;
+  }
+  
+  .exercise-card:hover .card-info {
+    transform: translateY(0);
+  }
+  
+  .card-body-title {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .card-body-title .card-title {
+    margin-bottom: 0;
+  }
+  .exercise-card.selected {
+    border: 2px solid #007bff; /* Highlight color */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Optional shadow */
+  }
+  /* Loader.css */
+
+
+
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: 
+    var(--c) 0%   50%,
+    var(--c) 50%  50%,
+    var(--c) 100% 50%;
+  background-size: 20% 100%;
+  animation: l1 1s infinite linear;
+}
+@keyframes l1 {
+  0%  {background-size: 20% 100%,20% 100%,20% 100%}
+  33% {background-size: 20% 10% ,20% 100%,20% 100%}
+  50% {background-size: 20% 100%,20% 10% ,20% 100%}
+  66% {background-size: 20% 100%,20% 100%,20% 10% }
+  100%{background-size: 20% 100%,20% 100%,20% 100%}
+} */
+
+
+.active-page {
+  background-color: #7571f9 !important;
+  border-color: #7571f9 !important;
+  color: white !important;
+}
+.Pagination-btn {
+  background-color: white !important;
+  border-color: 1 px solid #7571f9;
+  color: #7571f9 !important;
+}

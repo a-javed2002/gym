@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- theme meta -->
+        <meta name="theme-name" content="quixlab">
+        <title>Fitness Portal</title>
+        <!-- Favicon icon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="%PUBLIC_URL%/images/favicon.png">
+        <!-- Include Bootstrap CSS -->
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+            rel="stylesheet">
+        <!-- Pignose Calendar -->
+        <link
+            href="%PUBLIC_URL%/plugins/pg-calendar/css/pignose.calendar.min.css"
+            rel="stylesheet">
+        <!-- Chartist -->
+        <link rel="stylesheet"
+            href="%PUBLIC_URL%/plugins/chartist/css/chartist.min.css">
+        <link rel="stylesheet"
+            href="%PUBLIC_URL%/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+        <!-- Custom Stylesheet -->
+        <link href="%PUBLIC_URL%/css/style.css" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css">
+        <link
+            href="%PUBLIC_URL%/plugins/tables/css/datatable/dataTables.bootstrap4.min.css"
+            rel="stylesheet">
+        <link href="%PUBLIC_URL%/plugins/jquery-steps/css/jquery.steps.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- index page -->
+        <link
+            href="%PUBLIC_URL%/plugins/pg-calendar/css/pignose.calendar.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- font awesome for 3 dot icon -->
+
+        <!-- Add this to your public/index.html file in the head section -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+    <style>
+        body{
+            overflow-y: hidden;
+            height: 100vh;
+        }
+        .content-body{
+            overflow-y: scroll;
+            height: 100vh;
+           padding-bottom: 200px;
+        }
+        .btn-primary {
+            background-color: #7571f9 !important;
+            border: 1px solid #7571f9 !important;
+        }
+        .card-body label{
+            margin-left: 5px;
+        }
+/* App.css or a similar CSS file */
+.carousel .legend {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.carousel .legend h5 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.carousel .legend p {
+    margin: 0;
+}
+.login-form-bg{
+    margin-top: 500 !important;
+}
+.chat-icon {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #7571f9;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+.chat-icon i {
+    font-size: 24px;
+}
+
+.hide{
+display: none;
+}
+
+.dt-search{
+    text-align-last: right;
+}
+
+
+    </style>
+</head>
+<body>
+    <script>
+        function openChat() {
+            window.location.href = '/chat'; // Redirects to the chat page
+        }
+        </script>
+
+    <script>
+      const pid = localStorage.getItem('id');
+      console.log(pid)
+    </script>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle
+                    class="path"
+                    cx="50"
+                    cy="50"
+                    r="20"
+                    fill="none"
+                    stroke-width="3"
+                    stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+    <div id="main-wrapper">
+        <!--**********************************
+                    Sidebar start
+                ***********************************-->
+        <div class="nav-header" id="nav-header">
+            <div class="brand-logo">
+                <a href="index.html" style="font-size: 15px ;color: white;text-decoration: none;">
+                    <b class="logo-abbr">
+                        <img src="images/logo.png" alt>
+                    </b>
+                    <span class="logo-compact">
+                        <img src="./images/logo-compact.png" alt>
+                    </span>
+                    <span class="brand-title">
+                 
+                        <h5 style="font-size: 20px ;color: white;text-decoration: none; font-weight: bolder;">Fitness Portal</h5>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="header" id="header">
+            <div class="header-content clearfix">
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon">
+                            <i class="icon-menu"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown">
+                            <a href="javascript:void(0)"
+                                data-toggle="dropdown"></a>
+                            <div
+                                class="drop-down animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img
+                                                    class="float-left mr-3 avatar-img"
+                                                    src="images/avatar/1.jpg"
+                                                    alt>
+                                                <div
+                                                    class="notification-content">
+                                                    <div
+                                                        class="notification-heading">Saiful
+                                                        Islam</div>
+                                                    <div
+                                                        class="notification-timestamp">08
+                                                        Hours ago</div>
+                                                    <div
+                                                        class="notification-text">
+                                                        Hi Teddy, Just wanted to
+                                                        let you ...
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img
+                                                    class="float-left mr-3 avatar-img"
+                                                    src="images/avatar/2.jpg"
+                                                    alt>
+                                                <div
+                                                    class="notification-content">
+                                                    <div
+                                                        class="notification-heading">Adam
+                                                        Smith</div>
+                                                    <div
+                                                        class="notification-timestamp">08
+                                                        Hours ago</div>
+                                                    <div
+                                                        class="notification-text">Can
+                                                        you do me a
+                                                        favour?</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img
+                                                    class="float-left mr-3 avatar-img"
+                                                    src="images/avatar/3.jpg"
+                                                    alt>
+                                                <div
+                                                    class="notification-content">
+                                                    <div
+                                                        class="notification-heading">Barak
+                                                        Obama</div>
+                                                    <div
+                                                        class="notification-timestamp">08
+                                                        Hours ago</div>
+                                                    <div
+                                                        class="notification-text">
+                                                        Hi Teddy, Just wanted to
+                                                        let you ...
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img
+                                                    class="float-left mr-3 avatar-img"
+                                                    src="images/avatar/4.jpg"
+                                                    alt>
+                                                <div
+                                                    class="notification-content">
+                                                    <div
+                                                        class="notification-heading">Hilari
+                                                        Clinton</div>
+                                                    <div
+                                                        class="notification-timestamp">08
+                                                        Hours ago</div>
+                                                    <div
+                                                        class="notification-text">Hello</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative"
+                                data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img
+                                    src="images/user/1.png"
+                                    height="40"
+                                    width="40"
+                                    alt>
+                            </div>
+                            <div
+                                class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="/Profile"
+                                                className="text-decoration-none text-secondary"
+                                                style="text-decoration: none !important;">
+                                                <i class="fas fa-user"></i>
+                                                <span
+                                                    className="text-decoration-none">Profile</span>
+                                            </a>
+                                        </li>
+                                        <li id="See_trainer">
+                                            <a href="/Your_Trainer"
+                                                className="text-decoration-none text-secondary"
+                                                style="text-decoration: none !important;">
+                                                <i class="fas fa-dumbbell"></i>
+
+                                                <span
+                                                    className="text-decoration-none">Your
+                                                    Trainer</span>
+                                            </a>
+                                        </li>
+                                        <li id="Fee_Card">
+                                            <a href="/FeeCard"
+                                                className="text-decoration-none text-secondary"
+                                                style="text-decoration: none !important;">
+                                                <i class="fas fa-file-invoice-dollar"></i>
+
+                                                <span
+                                                    className="text-decoration-none">Fee
+                                                    Card</span>
+                                            </a>
+                                        </li>
+                                        <hr class="my-2">
+                                        <li>
+                                            <a href="/password-change"
+                                                class="text-decoration-none">
+                                                <i class="fas fa-lock"></i>
+                                                <span>Change Password</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                onclick="return handleLogout()"
+                                                class="text-decoration-none text-secondary">
+                                                <i class="fas fa-key"></i>
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <noscript>You need to enable JavaScript to run this app.</noscript>
+            <div id="root"></div>
+            <div class="footer " style="padding-left: 0px !important;">
+                <div class="copyright ">
+                    <p>
+                        Copyright &copy; Designed & Developed by
+                        <a href="https://www.linkedin.com/in/muhammad-huzaifa-siddiqui-06a209293/" target="_blank">Huzaifa Siddiqui</a>
+                        2024
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <script>
+const handleLogout = () => {
+
+  const confirmed = confirm('Are you sure you want to logout your account?');
+  if (confirmed) {
+    localStorage.clear();
+    window.location.href = "/login";
+  }
+  
+  return false;
+};
+
+    const role = localStorage.getItem('role');
+    const userToken = localStorage.getItem('User_token');
+    const adminToken = localStorage.getItem('Admin_token');
+    const exhibitorToken = localStorage.getItem('Exhibitor_token');
+    const tokensExist = userToken || adminToken || exhibitorToken;
+    const header = document.getElementById("nav-header");
+    const navheader = document.getElementById("header");
+    const sidebar = document.getElementById("sidebar");
+    const exhibitorElements = document.querySelectorAll(".exhibitor");
+    const adminElements = document.querySelectorAll(".admin");
+    const userElements = document.querySelectorAll(".user-link");
+    const foradminElements = document.querySelectorAll(".for-admin");
+    const fortrainerElements = document.querySelectorAll(".for-trainer");
+    const My_Event = document.getElementById("event");
+    const SEE_TRAINER = document.getElementById("See_trainer");
+    const Fee_Card = document.getElementById("Fee_Card");
+    if (!tokensExist) {
+        header.style.display = 'none';
+        navheader.style.display = 'none';
+        sidebar.style.display = 'none';
+    } else {
+        if (role === "Trainer") {
+            exhibitorElements.forEach(el => el.style.display = 'none');
+            adminElements.forEach(el => el.style.display = 'none');
+            SEE_TRAINER.style.display = 'none';
+            Fee_Card.style.display = 'none';
+            sidebar.style.display = 'block';
+            header.style.display = 'block';
+            navheader.style.display = 'block';
+            My_Event.style.display = 'block';
+        } else if (role === "User") {
+            userElements.forEach(el => el.style.display = 'block');
+            sidebar.style.display = 'block';
+            SEE_TRAINER.style.display = 'block';
+            header.style.display = 'block';
+            Fee_Card.style.display = 'block';
+            navheader.style.display = 'block';
+            My_Event.style.display = 'none';
+            exhibitorElements.forEach(el => el.style.display = 'none');
+            adminElements.forEach(el => el.style.display = 'none');
+            fortrainerElements.forEach(el => el.style.display = 'none');
+        }  
+        else {
+            exhibitorElements.forEach(el => el.style.display = 'block');
+            SEE_TRAINER.style.display = 'none';
+            Fee_Card.style.display = 'none';
+            userElements.forEach(el => el.style.display = 'block');
+            foradminElements .forEach(el => el.style.display = 'none');
+            sidebar.style.display = 'block';
+            header.style.display = 'block';
+            navheader.style.display = 'block';
+            fortrainerElements.forEach(el => el.style.display = 'none');
+            My_Event.style.display = 'none';
+        }
+    }
+        </script>
+        <script src="plugins/common/common.min.js"></script>
+        <script src="js/custom.min.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/gleek.js"></script>
+        <script src="js/styleSwitcher.js"></script>
+        <!-- Chartjs -->
+        <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+        <!-- Circle progress -->
+        <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+        <!-- Datamap -->
+        <script src="./plugins/d3v3/index.js"></script>
+        <script src="./plugins/topojson/topojson.min.js"></script>
+        <script src="./plugins/datamaps/datamaps.world.min.js"></script>
+        <!-- Morrisjs -->
+        <script src="./plugins/raphael/raphael.min.js"></script>
+        <script src="./plugins/morris/morris.min.js"></script>
+        <!-- Pignose Calender -->
+        <script src="./plugins/moment/moment.min.js"></script>
+        <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+        <!-- ChartistJS -->
+        <script src="./plugins/chartist/js/chartist.min.js"></script>
+        <script
+            src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+        <script src="./js/dashboard/dashboard-1.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+            crossorigin="anonymous"></script>
+        <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
+        <script
+            src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+        <script
+            src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+        <script src="./js/dashboard/dashboard-1.js"></script>
+        <script src="./plugins/jquery-steps/build/jquery.steps.min.js"></script>
+        <script
+            src="./plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="./js/plugins-init/jquery-steps-init.js"></script>
+        <!-- Chat Icon -->
+
+    </body>
+</html>

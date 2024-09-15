@@ -1,0 +1,69 @@
+.radio-group {
+    margin: 20px;
+  }
+  
+  .radio-label {
+
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .radio-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .radio-label .radio-custom {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .radio-label.selected .radio-custom {
+    border-color: #7571f9 ;
+  }
+  
+  .radio-label input:checked ~ .radio-custom {
+    background-color: #7571f9 ;
+    border-color: #7571f9 ;
+  }
+  
+
+
+
+
+
+  .trainer-time-slots-modal .modal-title-custom {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .trainer-time-slots-modal .card {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .trainer-time-slots-modal .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .trainer-time-slots-modal .card-body {
+    text-align: center;
+  }
+  
+  .trainer-time-slots-modal .time-slots p {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  

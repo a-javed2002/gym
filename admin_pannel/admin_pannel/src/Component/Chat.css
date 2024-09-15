@@ -1,0 +1,490 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow-y: hidden;
+
+}
+
+.main-body {
+    margin-left: 15.1875rem;
+    z-index: 0;
+}
+
+#app {
+    overflow-y: hidden;
+    padding: 10px;
+    height: 100vh;
+}
+
+#sidebar2 {
+    overflow-y: auto;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+#sidebar2::-webkit-scrollbar {
+    width: 6px;
+    /* Width of the scrollbar */
+    background-color: #f0f0f0;
+    /* Background color of the scrollbar track */
+}
+
+#sidebar2::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color of the scrollbar handle */
+    border-radius: 4px;
+    /* Rounded corners for the scrollbar handle */
+    height: 0px;
+}
+
+#sidebar2::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Color of the scrollbar handle on hover */
+}
+
+#sidebar2::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    /* Background color of the scrollbar track */
+}
+
+
+#contacts,
+#groups {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#contacts li,
+#groups li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#contacts li:hover,
+#groups li:hover {
+    background-color: #f0f0f0;
+}
+
+#contacts {
+
+    margin-bottom: 50px;
+
+}
+
+#contacts li {
+
+    margin-bottom: 10px;
+
+}
+
+.contact-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Ensure bottom padding for extra space */
+#contacts,
+#groups {
+    padding-bottom: 20px;
+    /* Add bottom padding to ensure last item is visible */
+}
+
+.chat {
+    overflow-y: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contacts,
+#groups {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contacts li,
+#groups li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#contacts li:hover,
+#groups li:hover {
+    background-color: #f0f0f0;
+}
+
+
+#chat-header {
+    background-color: #7571f9;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#chat-body {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    overflow-y: hidden;
+    background-color: #fff;
+    padding-bottom: 40px;
+}
+
+/* Footer styling */
+#chat-footer {
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-bottom {
+
+    width: 100%;
+    background-color: #f0f2f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#messages {
+    width: auto;
+    padding: 10px;
+    height: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the start horizontally */
+    justify-content: flex-start;
+    /* Align items to the start vertically */
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-text {
+    font-size: 0.8rem;
+
+}
+
+.message-time {
+
+    font-size: 0.77rem;
+    color: gray;
+    margin-left: 10px;
+}
+
+#messages::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f0f0f0;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    height: 40px;
+}
+
+#messages::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+#messages::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.message.sent {
+    width: auto;
+    padding: 10x;
+
+    align-self: flex-end;
+    background-color: #7571f9;
+    color: white;
+}
+
+.message.sent .message-time {
+
+    color: rgb(219, 219, 219);
+}
+
+.message.received {
+    width: auto;
+    padding: 10x;
+    align-self: flex-start;
+    background-color: #f1f1f1;
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.sent {
+    text-align: right;
+}
+
+.received {
+    text-align: left;
+}
+
+#send-button {
+    padding: 10px;
+    border: none;
+    background-color: #7571f9;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #7571f9;
+}
+
+
+
+/* chat.css */
+
+/* Style for selected contacts in the modal */
+#modal-contacts li.selected {
+    border: 2px solid blue;
+    background-color: #f0f8ff;
+    /* Optional: Light background color for selected item */
+}
+
+/* Modal styles */
+#group-modal {
+
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 550px;
+    height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+
+}
+
+#modal-contacts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#modal-contacts li {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    /* Optional: Border for unselected items */
+    border-radius: 4px;
+    /* Optional: Rounded corners for items */
+    margin-bottom: 5px;
+}
+
+#modal-contacts li:hover {
+    background-color: #f0f0f0;
+    /* Optional: Background color on hover */
+}
+
+.main-body .modal-content .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f44336;
+    /* Red background for close button */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Header */
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#modal-contacts li.selected {
+    border: 2px solid #2196F3;
+    /* Blue border for selected items */
+    background-color: #e3f2fd;
+    /* Light blue background for selected item */
+}
+
+/* Contacts List */
+#modal-contacts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#modal-contacts li {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transitions */
+}
+
+#modal-contacts li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+    /* Slightly enlarge on hover */
+}
+
+/* Buttons */
+.main-body .modal-content button {
+    background-color: #4CAF50;
+    /* Green background for create button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    /* Space between buttons */
+    transition: background-color 0.3s;
+}
+
+.main-body .modal-content button:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+    color: white;
+}
+
+.main-body .modal-content button.cancel {
+    background-color: #f44336;
+    /* Red background for cancel button */
+}
+
+.main-body .modal-content button.cancel:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background: #7571f9;
+    color: white;
+}
+
+.tab-button:hover {
+    background: #ddd;
+}
+
+#contacts,
+#groups {
+    list-style: none;
+    padding: 0;
+}
+
+#contacts li,
+#groups li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#contacts li.selected,
+#groups li.selected {
+    background: #e0e0e0;
+}
+
+
+.attach-icon {
+    background-color: transparent;
+    color: #7571f9;
+    transition: color 0.2s ease;
+}
+
+.attach-icon:hover {
+    color: #5b57d8;
+}
+
+
+/* message selected */
+
+.message.selected {
+background-color: grey; 
+    border: 1px solid #ccc;  
+    color: white !important;  /* Optional: add border to selected messages */
+}
+

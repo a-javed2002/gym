@@ -1,0 +1,124 @@
+/* Container */
+
+/* Fee Card */
+.fee-card {
+  background-color: #fff;
+  color: #333;
+  width: 90%;
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.fee-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Header */
+.fee-card h2 {
+  font-size: 28px;
+
+  color: #f8a100;
+  letter-spacing: 1px;
+}
+
+/* User Info Section */
+.user-info {
+  background-color: #4a47a3;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.user-info h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.user-info p {
+  font-size: 16px;
+}
+
+/* Fees Table */
+.fees-table {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.fees-table h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #4a47a3;
+}
+
+/* Table */
+.fee-card table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.fee-card th, .fee-card td {
+  padding: 8px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fee-card th {
+  background-color: #f4f4f4;
+  font-size: 18px;
+  color: #4a47a3;
+}
+
+/* Row Styling */
+.fee-card tr:last-child td {
+  border-bottom: none;
+}
+
+.paid {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.unpaid {
+  color: #dc3545 !important;
+  font-weight: bold;
+}
+
+/* Paid Date */
+.paid-date {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Hover Effects for Rows */
+.fee-card tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+/* Download Button */
+.download-btn {
+  background-color: #4a47a3;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #6b68d1;
+}

@@ -1,0 +1,72 @@
+/* ClientDetail.css */
+
+
+.profile-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    background: #fff; /* Card background */
+}
+.profile-image {
+    width: 150px;
+   height: 100%;
+
+    border: 4px solid #7571f9; /* Border to enhance profile image */
+ 
+}
+
+
+.card-title {
+    font-size: 1.75rem;
+    color: #7571f9;
+}
+
+.card-subtitle {
+    color: #6c757d;
+}
+
+.card-text {
+    font-size: 1rem;
+    text-align: left;
+    padding: 10px;
+    border-top: 1px solid #e9ecef;
+    margin-top: 20px;
+}
+
+.info-section {
+    background-color: #f1f1f1; /* Light background for info section */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.info-section strong {
+    color: #495057;
+}
+
+.info-section p {
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    align-items: end;
+    width: 300px;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group .btn svg {
+    margin-right: 8px;
+}

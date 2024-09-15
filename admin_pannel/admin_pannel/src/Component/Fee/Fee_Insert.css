@@ -1,0 +1,208 @@
+/* Fee_Insert.css */
+
+/* Container for user search results */
+.user-results {
+    margin-top: 20px;
+  }
+  
+  /* Card deck for user cards */
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Style for each user card */
+  .user-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    /* margin-bottom: 20px; */
+    height: 200px;
+    width: 100%;
+    /* max-width: 800px; */
+  }
+  
+  /* Style for user image */
+  .user-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+  }
+  
+  /* User info section */
+  .user-info2 {
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers items vertically */
+    height: 100%; /* Ensures the .user-info takes full height */
+  }
+  
+  .user-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .user-email {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .user-father-name {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Ensure columns inside user card layout */
+  .col-4, .col-8 {
+    flex: 0 0 auto;
+  }
+  
+  .col-4 {
+    width: 33.3333%;
+  }
+  
+  .col-8 {
+    width: 66.6666%;
+  }
+/* Center the button container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+  
+  /* Style the button */
+  .Paid {
+    width: 200px; /* Fixed width for the button */
+    display: flex; /* Flexbox to align icon and text */
+    align-items: center; /* Center icon and text vertically */
+    justify-content: center; /* Center text horizontally */
+    gap: 8px; /* Space between icon and text */
+    font-size: 1rem; /* Adjust font size */
+  }
+  
+  /* Optional: Style for the button icon */
+  .Paid .btn-icon {
+    font-size: 1.2rem; /* Adjust icon size */
+  }
+  /* Fee_Insert.css */
+
+/* Container for the search input */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Style the search input */
+  .search-input {
+    width: 100%;
+    padding: 12px 40px;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Style the search icon */
+
+
+  /* Center search input and results */
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-icon {
+    margin-right: 8px;
+  }
+  
+  .search-input {
+    width: 100%;/* Adjust width as needed */
+    font-size: 1rem; /* Adjust font size */
+  }
+  
+  /* Style for user cards */
+  .user-card {
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .user-card:hover {
+    background-color: #f8f9fa;
+  }
+  
+
+  
+  /* Center the button horizontally */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .Paid {
+    width: 200px; /* Adjust width as needed */
+    margin-top: 10px;
+  }
+  
+  /* Add spacing between button icon and text */
+  .btn-icon {
+    margin-right: 8px;
+  }
+
+
+  /* Style for user cards */
+.user-card {
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .user-card.selected {
+    border-color: blue; /* Blue border for selected user */
+    background-color: #f0f8ff; /* Light background for better visibility */
+  }
+  
+  .user-card:hover {
+    background-color: #f8f9fa;
+  }
+  .fee-card2{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 200px;
+  }
+
+.fee-card2::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+    background-color: #f0f0f0; /* Background color of the scrollbar track */
+}
+
+.fee-card2::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 4px; /* Rounded corners for the scrollbar handle */
+    height: 0px;
+}
+
+.fee-card2::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the scrollbar handle on hover */
+}
+
+.fee-card2::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Background color of the scrollbar track */
+}
