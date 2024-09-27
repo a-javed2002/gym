@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Text Translator</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+
+        <style>
+  
+
+        #languageSelect {
+            width: 300px;
+            /* Set width for the dropdown */
+        
+        }
+
+        #languageSelect2 {
+            width: 300px;
+            /* Set width for the dropdown */
+    
+        }
+        .heading {
+            -webkit-text-stroke: 3px #A594F9;
+            color: #CDC1FF;
+            position: relative;
+            /* Allows positioning of the select element */
+        }
+
+        .textarea-container {
+            display: flex;
+            align-items: center;
+            /* Align items vertically in the center */
+            gap: 10px;
+            /* Space between textarea and button */
+        }
+
+  
+
+        .submit-button {
+            background-color: #A594F9;
+            white-space: nowrap;
+            height: 68px;
+        }
+
+        .submit-button:hover {
+            border: 2px solid #A594F9;
+            color: black;
+        }
+
+        .form-wrapper {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #E5D9F2;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      
+        }
+
+        body {
+    font-family: "Poppins", system-ui;
+    background-color: #E5D9F2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px; 
+    overflow-y: hidden;
+}
+
+#result {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+    overflow-y: auto; /* Enable scrolling when content exceeds available space */
+    border: 2px solid #CDC1FF;
+    border-radius: 10px;
+    background-color: #fff;
+    max-height: calc(100vh - 200px); /* Ensures the result area doesn't expand infinitely */
+}
+
+
+        .message {
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 60%;
+        }
+
+        .receiver {
+            background-color: #D4F1F4;
+            align-self: flex-start;
+        }
+
+        .sender {
+            background-color: #A594F9;
+            color: white;
+            align-self: flex-end;
+        }
+        .material-icons{
+            font-size: 50px;
+        }
+
+        .textarea {
+    border: 3px solid #CDC1FF;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 100px;
+    max-height: 170px; 
+    width: 100%;
+    overflow-y: auto;
+    resize: none;
+}
+/* CSS to center content */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CSS for hiding the div */
+.hidden {
+  display: none;
+}
+
+    </style>
+    </head>
+
+    <body>
+        <div class="m-3 mt-5 content">
+            <h1 class="mb-4 text-center heading display-5">Text
+                Translator</h1>
+            <div class="d-flex justify-content-between mb-3">
+                <select class="form-select p-3" id="languageSelect2">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="zh">Chinese</option>
+                </select>
+                <i class="material-icons">swap_horiz</i>
+
+                <select class="form-select p-3" id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="zh">Chinese</option>
+                </select>
+            </div>
+
+            <div id="result" s>
+                <div id="noMessagesImage"
+                    style="display: none;height: 100vh; margin-top: 70px;">
+                    <center>
+                        <img src="translate.png" alt="No messages"
+                            style="width: 150px; height: 150px;">
+<h3 class="mt-3">Translate Your Text..</h3>
+                    </center> </div>
+
+            </div>
+        </div>
+
+        <div class="form-wrapper">
+            <form class="text-center" id="translationForm">
+                <div class="mb-3 textarea-container">
+                    <textarea class="form-control textarea" id="inputText"
+                        oninput="resizeTextarea(this)"></textarea>
+                    <button type="submit"
+                        class="btn submit-button">Translate</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function resizeTextarea(textarea) {
+                textarea.style.height = 'auto'; // Reset the height
+                if (textarea.scrollHeight > 170) {
+                    textarea.style.height = '170px'; // Keep height at max 170px
+                } else {
+                    textarea.style.height = textarea.scrollHeight + 'px'; // Resize normally
+                }
+            }
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script>
+        function resizeTextarea(textarea) {
+            textarea.style.height = 'auto'; // Reset height
+            textarea.style.height = textarea.scrollHeight + 'px'; // Set height based on content
+        }
+
+        document.getElementById("translationForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from submitting
+    const userInput = document.getElementById("inputText").value;
+    const language = document.getElementById("languageSelect").value;
+
+    if (userInput.trim() === "") return; // Avoid empty input
+
+    // Hide the "No messages" image when a message is added
+    const noMessagesImage = document.getElementById("noMessagesImage");
+    noMessagesImage.style.display = "none";
+
+    // Add receiver's message (the user's input)
+    const resultContainer = document.getElementById("result");
+    const receiverMessage = document.createElement("div");
+    receiverMessage.classList.add("message", "receiver");
+    receiverMessage.textContent = userInput;
+    resultContainer.appendChild(receiverMessage);
+
+    // Simulate translation (you can replace this with actual translation logic)
+    const translated = simulateTranslation(userInput, language);
+
+    // Add sender's message (the translated text)
+    const senderMessage = document.createElement("div");
+    senderMessage.classList.add("message", "sender");
+    senderMessage.textContent = translated;
+    resultContainer.appendChild(senderMessage);
+
+    // Scroll the result container to the bottom after each new message
+    resultContainer.scrollTop = resultContainer.scrollHeight;
+
+    // Clear the input box
+    document.getElementById("inputText").value = "";
+    resizeTextarea(document.getElementById("inputText"));
+});
+
+// Show the image if the result container is empty
+function checkIfEmpty() {
+    const resultContainer = document.getElementById("result");
+    const noMessagesImage = document.getElementById("noMessagesImage");
+
+    if (resultContainer.children.length === 1) { // Only the image is present
+        noMessagesImage.style.display = "block";
+    } else {
+        noMessagesImage.style.display = "none";
+    }
+}
+
+// Call this function initially to check if the result container is empty
+checkIfEmpty();
+
+function simulateTranslation(text, language) {
+    const translations = {
+        es: "Traducción simulada al español",
+        fr: "Traduction simulée en français",
+        de: "Simulierte Übersetzung ins Deutsche",
+        zh: "模拟中文翻译"
+    };
+    return translations[language] || text; // Fallback to input text if no translation
+}
+
+    </script>
+    </body>
+
+</html>

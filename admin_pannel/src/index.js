@@ -63,6 +63,9 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes, Navigate, Switch, useLocation } from 'react-router-dom';
 import Dasboard from './Component/Dashboard';
 import Chat from './Component/Chat';
+import CameraPage from './Component/CameraPage';
+import ChinExercisePage from './Component/ChinExercisePage';
+import ShoulderShrugCamera from './Component/ShoulderShrugCamera';
 
 
 import Expense_Show from './Component/Expense/Expense_Show';
@@ -95,6 +98,9 @@ function AppRoutes() {
 
   return (
     <Routes>
+      <Route path='/ai' element={<CameraPage />} />
+      <Route path='/ai2' element={<ChinExercisePage />} />
+      <Route path='/ai3' element={<ShoulderShrugCamera />} />
       <Route path='/Chat' element={<Chat />} />
       
       <Route path='/TextToSpeech' element={<TextToSpeech />} />
