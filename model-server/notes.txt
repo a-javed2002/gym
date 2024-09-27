@@ -1,0 +1,8 @@
+python app.py
+
+uvicorn main:app --reload
+
+pip install fastapi uvicorn opencv-python mediapipe numpy
+
+
+uvicorn main:app --reload
